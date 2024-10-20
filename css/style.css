@@ -1,0 +1,476 @@
+/*  Standers */
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.clr {
+    clear: both;
+}
+
+/* .container {
+    width: 75%;
+    margin: auto;
+} */
+
+a:active,
+a:hover,
+input:focus {
+    outline: 0 none;
+}
+
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0
+}
+
+
+/* =================================== */
+
+
+.container {
+    display: grid;
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 0.7fr 0.7fr 0.7fr 0.5fr; 
+    gap: 0px 0px; 
+    grid-auto-flow: row;
+    grid-template-areas:
+        "iphone iphone learn learn"
+        "brand hardly hardly icloud"
+        "game best best icloud"
+        "twitter popular- more more";
+}
+
+.iphone {
+    grid-area: iphone;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.iphone .content{
+    width: 30%; 
+}
+
+.iphone .content p {
+    color: rgb(159, 163, 167);
+    margin: 10px 0;
+}
+
+.iphone .content h3{
+    line-height: 30px;
+}
+
+.iphone .iphone-img{
+    width: 50%;
+}
+
+.iphone .iphone-img img{
+    width: 100%;
+}
+
+
+
+
+.learn {
+    grid-area: learn;
+    background-color: rgb(247, 248, 249);
+    padding: 50px;
+    text-align: center;
+}
+
+.learn p {
+    margin: 20px;
+    color: rgb(159, 163, 167);
+}
+
+.learn h2{
+    font-size: 40px;
+    margin: 20px;
+}
+
+.learn h2:hover{
+    text-decoration: underline;
+}
+
+.learn a {
+    color: rgb(39, 185, 194);
+}
+
+
+
+.brand {
+    grid-area: brand;
+    background-color: rgb(240, 86, 56);
+    text-align: center;
+}
+
+.brand .content{
+    position: relative;
+}
+
+.brand .content h2{
+    color: #fff;
+    width: 80%;
+    margin: auto;
+    font-size: 27px;
+}
+
+.brand .content a{
+    color: yellow;
+    position: absolute;
+    top: 100px;
+    right: 105px;
+    font-size: 15PX;
+    text-decoration: none;
+}
+
+.brand .brand-img{
+    width: 100%;
+}
+
+.brand .brand-img img{
+    width: 100%;
+}
+
+
+
+
+
+.hardly {
+    grid-area: hardly;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hardly .left{
+    width: 40%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.hardly .left .l-img{
+    margin-top: 30px;
+    width: 80%;
+}
+
+.hardly .left p{
+    color: rgb(159, 163, 167);
+    margin-top: 100px;
+}
+
+.hardly .left .l-img img{
+    width: 100%;
+}
+
+
+.hardly .right{
+    width: 40%;
+}
+
+.hardly .right p{
+    color: rgb(159, 163, 167);
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.hardly .right a{
+    text-decoration: none;
+    color: rgb(39, 187, 208);
+}
+
+
+.icloud {
+    grid-area: icloud;
+    background-color: rgb(143, 118, 188);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.head-cloud{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.162);
+}
+
+.icloud .head-cloud p{
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.icloud .cloud-img{
+    width: 80%;
+}
+
+.icloud .cloud-img img{
+    width: 100%;
+}
+
+.icloud h2{
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.icloud p{
+    width: 75%;
+    line-height: 30px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.icloud a{
+    text-decoration: none;
+    color: black;
+    background-color: yellow;
+    padding: 20px;
+    border-radius: 40px;
+}
+
+
+.more {
+    background-color: rgb(33, 33, 33);
+    grid-area: more;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.more .more-img{
+    width: 45%;
+    position: relative;
+    right: 60px;
+    overflow: hidden;
+}
+
+.more .more-img img{
+    width: 100%;
+}
+
+.more h2{
+    color: #fff;
+    width: 30%;
+    align-self: center;
+    line-height: 30px;
+}
+
+.twitter {
+    background: rgb(51,195,223);
+    background: radial-gradient(circle, rgba(51,195,223,0.9028731161089085) 75%, rgba(56,213,244,1) 76%);
+    grid-area: twitter;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.twitter i{
+    color: #fff200;
+    margin-top: 30px;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.twitter p{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 800;
+    color: #fff;
+    width: 75%;
+    
+}
+
+.game {
+    grid-area: game;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.game .game-img{
+    width: 90%;
+    margin: 40px 0;
+}
+
+.game .game-img img{
+    width: 100%;
+}
+
+.game h2{
+    width: 50%;
+    margin: auto;
+}
+
+.game a{
+    text-decoration: none;
+    color: rgb(39, 187, 208);
+}
+
+.popular- {
+    grid-area: popular-;
+    
+}
+
+.popular- p{
+    color: #fff;
+    background-color: rgba(0, 255, 0, 0.9);
+    width: 20%;
+    margin: 40px auto 20px;
+    padding: 7px;
+    text-align: center;
+    font-size: 13px;
+    border-radius: 10px;
+}
+
+.popular- h2{
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
+
+.best {
+    grid-area: best;
+    background-color: rgb(147, 182, 183);
+    background-image: url(../img/5bc2f42d5a5ed97dab707e7e_UX.png);
+    background-position: 50% 100%;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+.best p{
+    color: #fff;
+    background-color: rgba(255, 68, 0, 0.588);
+    width: 20%;
+    margin: 30px 20px 50px;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 10px;
+}
+
+.best h2{
+    color: #fff;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.best .best-img{
+    margin-top: 90px;
+    width: 80%;
+}
+
+.best .best-img img{
+    width: 100%;
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "iphone iphone"
+            "learn learn"
+            "brand hardly"
+            "icloud icloud"
+            "game best"
+            "popular- more"
+            "twitter twitter";
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "iphone"
+            "learn"
+            "brand"
+            "hardly"
+            "icloud"
+            "game"
+            "best"
+            "popular-"
+            "more"
+            "twitter";
+    }
+
+    .iphone .content, 
+    .hardly .left, 
+    .hardly .right, 
+    .learn, 
+    .brand .content, 
+    .icloud, 
+    .game, 
+    .more, 
+    .best {
+        width: 100%;
+        text-align: center;
+    }
+
+    .iphone, 
+    .hardly, 
+    .brand, 
+    .icloud, 
+    .game, 
+    .more, 
+    .best {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .brand .content a {
+        right: 10px;
+        top: 80px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .iphone .content h3, 
+    .icloud h2 {
+        font-size: 24px;
+    }
+
+    .learn h2 {
+        font-size: 32px;
+    }
+
+    .iphone .iphone-img img, 
+    .hardly .left .l-img img, 
+    .icloud .cloud-img img, 
+    .best .best-img img {
+        width: 80%;
+    }
+
+    .best h2 {
+        font-size: 24px;
+    }
+
+    .twitter p {
+        font-size: 18px;
+    }
+}
